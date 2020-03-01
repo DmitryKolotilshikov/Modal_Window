@@ -1,0 +1,87 @@
+.d-modal {}
+
+.d-modal.open .modal-overlay, 
+.d-modal.open .main-modal {
+    opacity: 1;
+    z-index: 1;
+}
+.d-modal.hide .modal-overlay, 
+.d-modal.hide .main-modal {
+    opacity: 1;
+    z-index: 1;
+}
+.d-modal.open .main-modal {
+  transform: translateY(200px);
+}
+.d-modal.open .modal-overlay {
+    background-color: rgba(0, 0, 0, .5);
+}
+.d-modal.hide .main-modal {
+  transform: translateY(-200px);
+}
+.d-modal.hide .modal-overlay {
+    background-color: rgba(0, 0, 0, 0);
+}
+.main-modal, .modal-overlay {
+    opacity: 0;
+    z-index: -1;
+}
+
+.main-modal {
+    width: 600px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 7px;
+    margin: 0 auto;
+    transform: translateY(-200px);  
+    transition: transform .3s ease-in;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color .3s ease-in;
+    display: flex;
+    justify-content: center;    
+}
+
+.my-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px 10px 15px;
+}
+.my-header span {    
+   border: 2px solid red;
+   width: 30px;
+   height: 30px;  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0;
+}
+
+.my-header span:hover {
+    cursor: pointer;
+}
+
+.my-body {
+    height: 100px;  
+    padding: 10px;
+}
+
+.my-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.my-footer > button {
+    margin: 0 5px;
+}
+
