@@ -11,13 +11,13 @@
     z-index: 1;
 }
 .d-modal.open .main-modal {
-  transform: translateY(200px);
+  transform: translateY(150px);
 }
 .d-modal.open .modal-overlay {
     background-color: rgba(0, 0, 0, .5);
 }
 .d-modal.hide .main-modal {
-  transform: translateY(-200px);
+  transform: translateY(-150px);
 }
 .d-modal.hide .modal-overlay {
     background-color: rgba(0, 0, 0, 0);
@@ -29,11 +29,11 @@
 
 .main-modal {
     width: 600px;
-    height: 200px;
+    height: 150px;
     background-color: #fff;
     border-radius: 7px;
     margin: 0 auto;
-    transform: translateY(-200px);  
+    transform: translateY(-150px);  
     transition: transform .3s ease-in;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .my-body {
-    height: 100px;  
+    height: 50px;  
     padding: 10px;
 }
 

@@ -39,7 +39,7 @@ const _createModal = function(options) {
             </div>
         </div>    
     `)
-    const footer = _createModalFooter(options.footerButttons);
+    const footer = _createModalFooter(options.footerButtons);
     footer.appendAfter(element.querySelector('[data-content]'))
     document.body.append(element)
     return element
@@ -65,11 +65,13 @@ $.modal = function(options) {
             setTimeout(()=>{
                 $modal.classList.remove('hide');
                 closing = false;
+                if(typeof options.onClose === 'function') {
+                    options.onClose();
+                }
             }, ANIMATION_SPEED);   
         }
     }
     let myClick = event=> {        
-        console.log(event.target.dataset.close);
         if(event.target.dataset.close) {
             modal.close();        
         }
